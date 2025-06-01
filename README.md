@@ -4,20 +4,6 @@
 
 Aplikacja webowa (zadanie 1) została zmodyfikowana i zapisana w folderze `src`. Projekt umożliwia użytkownikowi wybór kraju i miasta w celu sprawdzenia aktualnej pogody (API: OpenWeatherMap).
 
-## Struktura repozytorium
-
-pawcho_zad2/
-├── .github/
-│ └── workflows/
-│ └── docker-build.yml # Plik workflow dla GitHub Actions
-├── src/
-│ ├── main.py # Kod aplikacji Flask
-│ ├── templates/
-│ │ └── index.html # Widok HTML aplikacji
-├── Dockerfile # Plik Dockerfile budujący obraz
-├── requirements.txt # Zależności aplikacji
-├── README.md # Niniejszy plik
-
 ## Sekrety użyte w workflow
 
 W zakładce *Settings > Secrets and variables > Actions* utworzono:
@@ -43,5 +29,5 @@ Workflow `.github/workflows/docker-build.yml` wykonuje:
 
 Chain GHAction został uruchomiony automatycznie i zakończył się sukcesem, co można potwierdzić w zakładce **Actions**:
 
-✅ `Final commit` – zakończony poprawnie  
+`Final commit` – zakończony poprawnie  
 Link: [https://github.com/zZo0mMeE/pawcho_zad2/actions](https://github.com/zZo0mMeE/pawcho_zad2/actions)
