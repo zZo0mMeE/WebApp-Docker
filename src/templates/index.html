@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pogoda</title>
+</head>
+<body>
+    <h1>Sprawdź pogodę</h1>
+    <form method="post">
+        <label for="country">Wybierz kraj:</label>
+        <select id="country" name="country" onchange="updateCities(this.value)">
+            {% for country in locations.keys() %}
+            <option value="{{ country }}">{{ country }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="city">Wybierz miasto:</label>
+        <select id="city" name="city">
+            {% set first_country = locations|dictsort|first %}
+            {% for city in first_country[1] %}
+            <option value="{{ city }}">{{ city }}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">Sprawdź pogodę</button>
+    </form>
+
+    {% if weather %}
+    <h2>Pogoda w {{ weather.city }}</h2>
+    <p>Temperatura: {{ weather.temperature }} °C</p>
+    <p>Opis: {{ weather.description }}</p>
+    {% endif %}
+
+    <script>
+        const locations = {{ locations|tojson }};
+        function updateCities(country) {
+            const citySelect = document.getElementById('city');
+            citySelect.innerHTML = '';
+            locations[country].forEach(city => {
+                const option = document.createElement('option');
+                option.value = city;
+                option.textContent = city;
+                citySelect.appendChild(option);
+            });
+        }
+    </script>
+</body>
+</html>
