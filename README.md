@@ -1,4 +1,4 @@
-# Zadanie 2 – GitHub Actions: Budowa i Publikacja Obrazu Dockera
+# PAWCHO_Pogoda2 GitHub Actions: Budowa i Publikacja Obrazu Dockera
 
 ## Opis projektu
 
