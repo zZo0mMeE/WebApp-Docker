@@ -2,7 +2,7 @@
 
 ## Opis projektu
 
-Aplikacja webowa (zadanie 1) została zmodyfikowana i zapisana w folderze `src`. Projekt umożliwia użytkownikowi wybór kraju i miasta w celu sprawdzenia aktualnej pogody (API: OpenWeatherMap).
+Aplikacja webowa (Pogoda) została zmodyfikowana i zapisana w folderze `src`. Projekt umożliwia użytkownikowi wybór kraju i miasta w celu sprawdzenia aktualnej pogody (API: OpenWeatherMap).
 
 ## Sekrety użyte w workflow
 
@@ -29,5 +29,4 @@ Workflow `.github/workflows/docker-build.yml` wykonuje:
 
 Chain GHAction został uruchomiony automatycznie i zakończył się sukcesem, co można potwierdzić w zakładce **Actions**:
 
-`Final commit` – zakończony poprawnie  
 Link: [https://github.com/zZo0mMeE/pawcho_zad2/actions](https://github.com/zZo0mMeE/pawcho_zad2/actions)
